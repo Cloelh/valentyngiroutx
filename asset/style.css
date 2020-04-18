@@ -1,0 +1,610 @@
+*{
+	padding: 0;
+	margin: 0;
+
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+
+.image{
+	border-radius: 10px;
+}
+
+
+h3{
+	text-transform: uppercase;
+	font-size: 3em;
+	padding-bottom: 50px;
+	color: #202020;
+}
+
+h4{
+	text-transform: uppercase;
+	font-size: 1.3em;
+	padding-bottom: 10px;
+	color: #202020;
+}
+
+
+
+.content{
+	padding-right: 150px;
+	padding-left: 150px;
+}
+
+
+/*header*/
+.header{
+	background: rgb(195,34,154);
+	background: -webkit-linear-gradient(bottom, rgba(195,34,154,1) 0%, rgba(51,45,253,1) 100%);
+	background: -o-linear-gradient(bottom, rgba(195,34,154,1) 0%, rgba(51,45,253,1) 100%);
+	background: linear-gradient(to top, rgba(195,34,154,1) 0%, rgba(51,45,253,1) 100%);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+	.header h1{
+		font-size: 11em;
+		text-transform: uppercase;
+		color: white;
+		letter-spacing: 20px;
+		text-align: center;
+	}
+
+	.header img{
+		position: absolute;
+		height: 50px;
+		left: 47%;
+		bottom: 40px;
+		background-color: rgba(255,255,255,0.4);
+		padding:10px;
+		border-radius: 10px;
+		animation: scrollloop 1.3s ease infinite;
+	}
+			@keyframes scrollloop{
+				0%{
+					box-shadow: 10px 10px 30px rgba(0,0,0,0);transform: translate(0px, 0px);
+				}
+				50%{
+					box-shadow: 10px 10px 30px rgba(0,0,0,0.2);transform: translate(-1px, -1px);
+				}
+				100%{
+					box-shadow: 10px 10px 30px rgba(0,0,0,0);transform: translate(0px, 0px);
+				}
+			}
+
+		.header img:hover{
+			animation: scroll 0.2s ease;
+			box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
+			transform: translate(-1px, -1px);
+		}
+
+			@keyframes scroll{
+				from{box-shadow: 10px 10px 30px rgba(0,0,0,0);transform: translate(0px, 0px);}
+				to{box-shadow: 10px 10px 30px rgba(0,0,0,0.2);transform: translate(-1px, -1px);}
+
+			}
+
+
+
+/*index about*/
+.about{
+	color: #202020;
+	display: flex;
+	height: 100vh;
+	width: 100%;
+}
+
+	.about .img{
+		background-image: url('../img/photo_about.jpg');
+		background-position: center;
+		background-size: cover;
+		margin: 100px;
+		margin-right: 10px;
+		width: 200%;
+	}
+
+	.about .text{
+		color: #202020;
+		margin: 100px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+		.about p{
+			color: #202020;
+			font-size: 1.4em;
+			padding-right: 10px;
+			line-height: 30px;
+		}
+
+/*index projet*/
+.projet{
+	color: #202020;
+}
+
+.un_projet{
+	margin-bottom: 130px;
+	height: 90vh;
+}
+
+/*commun*/
+.un_projet .image{
+	background-size: cover;
+	background-position: center;
+}
+
+.un_projet .title{
+	font-style: italic;
+	font-size: 1.9em;
+	display: flex;
+}
+
+.un_projet .text{
+		grid-area: text;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.un_projet .text p{
+			font-size: 1.4em;
+			line-height: 30px;
+		}
+
+	/*musikout*/
+
+	.grille_musikout{
+		display: grid;
+		grid-template-columns: 1.9fr 1.2fr 1.5fr;
+		grid-template-rows: 3.2fr 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		grid-template-areas: 	"bekar 	lard 	text"
+								"title 	lard 	text";
+	}
+
+	.bekar{grid-area: bekar; background-image: url('../img/Bekar.jpg');}
+	.lard{grid-area: lard; background-image: url('../img/lard.jpg');}
+	.title{
+		grid-area: title;
+		justify-content: flex-end;
+	}
+
+	/*photo*/
+
+	.grille_photo{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 0.2fr 0.8fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		grid-template-areas: 	"gauche 	milieu	droite"
+								"gauche 	title 	title"
+								"gauche 	text	text";
+	}
+
+	.grille_photo .gauche{grid-area: gauche; background-image: url('../img/Bekar.jpg');}
+	.grille_photo .milieu{grid-area: milieu; background-image: url('../img/lard.jpg');}
+	.grille_photo .droite{grid-area: droite; background-image: url('../img/Bekar.jpg');}
+	.grille_photo .title{
+		grid-area: title;
+		justify-content: flex-start;
+	}
+
+
+	/*video*/
+
+	.grille_video{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		grid-template-areas: 	"title 		droite"
+								"gauche 	text";
+	}
+
+	.grille_video .gauche{grid-area: gauche; background-image: url('../img/Bekar.jpg');}
+	.grille_video .droite{grid-area: droite; background-image: url('../img/lard.jpg');}
+	.grille_video .title{
+		grid-area: title;
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
+
+	/*web*/
+
+	.grille_web{
+		display: grid;
+		grid-template-columns: 1fr 0.6fr;
+		grid-template-rows: .2fr 1.1fr 1.9fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		grid-template-areas: 	"title 		droite"
+								"text 		droite"
+								"gauche 	droite";
+	}
+
+	.grille_web .gauche{grid-area: gauche; background-image: url('../img/Bekar.jpg');}
+	.grille_web .droite{grid-area: droite; background-image: url('../img/lard.jpg');}
+	.grille_web .title{
+		grid-area: title;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+
+
+
+/*skills*/
+.skills{
+	background: #202020;
+	color: white;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+	.skills h3{
+		color: white;
+	}
+
+
+	.skill{
+		height: 150px;
+		display: flex;
+		align-items: center;
+	}
+		.skills .gauche{
+			flex-direction: row;
+		}
+		.skills .droite{
+			flex-direction: row-reverse;
+		}
+	.skill p{
+		font-size: 1.4em;
+	}
+
+	.skill img{
+		height: 50%;
+		padding:20px;	
+	}
+		
+
+
+
+
+
+
+/*footer*/
+
+
+.content{
+	padding-right: 100px;
+	padding-left: 100px;
+}
+
+.footer{
+	padding-top: 50px;
+	background-color: white;
+	color: #202020;
+	/*border-top: white 1px solid;*/
+	height: 250px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+	.footer div{
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+		.footer_about p{
+			font-size: 1.4em;
+		}
+	.footer_document{
+		align-items: center;
+	}
+
+	.footer_contact{
+		align-items: center;
+	}
+		.footer .reseaux{
+			display: flex;
+			flex-direction: row;
+			width: 40%;
+			justify-content: space-between;
+		}
+
+.footer h4{
+	padding-bottom: 30px;
+}
+
+
+.footer i{
+	font-size: 2em;
+	color: rgba(32,32,32,0.5);
+	transition: all ease 0.2s;
+}
+.footer i:hover{
+	color: rgba(32,32,32,1);
+	font-size: 2.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*responsive tablet*/
+@media screen and (max-width: 1100px)
+{
+
+	.content{
+		padding-right: 100px;
+		padding-left: 100px;
+	}
+
+    .header h1{
+		font-size: 8em;
+		letter-spacing: 20px;
+	}
+
+	.about .img{
+		margin-left: 100px;
+	}
+	.about .text{
+		margin-right: 100px;
+	}
+
+
+	.un_projet{
+		height: 75vh;
+	}
+	.grille_musikout{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 0.3fr 7fr;
+		grid-template-areas: 	"title 	text"
+								"bekar 	text";
+	}
+
+	.title{
+		justify-content: flex-start;
+	}
+
+	.footer{
+		height: 150px;
+	}
+
+	.footer h4{
+		font-size: 1em;
+	}
+
+	.footer p{
+		font-size: 1em;
+	}
+
+	.footer .reseaux{
+		width: 70%;
+	}
+
+}
+
+/*tablet horyzontale*/
+
+@media screen and (max-width: 800px)
+{
+    .header h1{
+		font-size: 6em;
+		letter-spacing: 10px;
+	}
+
+	.about{
+		display: grid;
+		margin-right: 100px;
+		margin-left: 100px;
+	}
+
+		.about .img{
+			background-position: center;
+			width: 70%;
+			height: 400px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+		}
+
+		.about .text{
+			margin-right: 100px;
+			margin-left : 0px;
+			display: flex;
+			flex-direction: column;
+		}
+
+
+	.un_projet{
+		height: 65vh;
+		width: 100vw;
+		margin-right: 100px;
+	}
+	.grille_musikout{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 0.3fr 7fr;
+		grid-template-areas: 	"title 	title"
+								"bekar 	text";
+	}
+}
+
+
+
+
+/*smartphone*/
+/*@media screen (max-width: 1400px);
+{
+    .header h1{
+		font-size: 900em;
+	}
+
+	.about{
+		display: grid;
+		margin-right: 100px;
+		margin-left: 100px;
+	}
+
+		.about .img{
+			background-position: center;
+			width: 70%;
+			height: 400px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+		}
+
+		.about .text{
+			margin-right: 100px;
+			margin-left : 0px;
+			display: flex;
+			flex-direction: column;
+		}
+
+
+	.un_projet{
+		height: 65vh;
+		width: 100vw;
+		margin-right: 100px;
+	}
+	.grille_musikout{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 0.3fr 7fr;
+		grid-template-areas: 	"title 	title"
+								"bekar 	text";
+	}
+
+
+
+	.grille_photo{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 0.3fr 0.8fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		grid-template-areas: 	"gauche 	milieu"
+								"gauche 	title"
+								"gauche 	text";
+	}
+
+	.grille_photo .gauche{grid-area: gauche; background-image: url('../img/Bekar.jpg');}
+	.grille_photo .milieu{grid-area: milieu; background-image: url('../img/lard.jpg');}
+	.grille_photo .droite{display: none;}
+	.grille_photo .title{
+		grid-area: title;
+		justify-content: flex-start;
+	}
+
+
+
+
+	.grille_video{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		grid-template-areas: 	"title 		droite"
+								"gauche 	text";
+	}
+
+	.grille_video .gauche{grid-area: gauche; background-image: url('../img/Bekar.jpg');}
+	.grille_video .droite{grid-area: droite; background-image: url('../img/lard.jpg');}
+	.grille_video .title{
+		grid-area: title;
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
+
+	.grille_web{
+		display: grid;
+		grid-template-columns: 1fr 0.6fr;
+		grid-template-rows: .2fr 1.1fr 1.9fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		grid-template-areas: 	"title 		droite"
+								"text 		droite"
+								"gauche 	droite";
+	}
+
+	.grille_web .gauche{grid-area: gauche; background-image: url('../img/Bekar.jpg');}
+	.grille_web .droite{grid-area: droite; background-image: url('../img/lard.jpg');}
+	.grille_web .title{
+		grid-area: title;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+
+	.title{
+		justify-content: flex-start;
+	}
+
+	.footer{
+		height: 150px;
+	}
+
+	.footer h4{
+		font-size: 1em;
+	}
+
+	.footer p{
+		font-size: 1em;
+	}
+
+	.footer .reseaux{
+		width: 70%;
+	}
+
+}
+
+*/
+
+
+
+
+
+
+
+
+
+/**************scroll****************/
+
+
+/*scroll*/
+.reveal{ opacity: 0;}
+
+	.reveal_about{ transform: translateX(40px);}
+	.reveal_about-visible{opacity: 1; transform: translateX(-40px); transition: .4s ease all;}
+/*
+	.reveal_photo{transform: scale(0);}
+	.reveal_photo-visible{opacity: 1; transition: .4s ease all; transform: scale(1);}*/
+
+	.reveal_photo-visible1{animation: visibleun ease 2s both;}
+	.reveal_photo-visible2{animation: visibledeux ease 2s both;}
+	.reveal_photo-visible3{animation: visibletrois ease 2s both;}
+	.reveal_photo-visible4{animation: visiblequatre ease 2s both;}
+
+		@keyframes visibleun{0%{opacity: 0; transform: scale(0);}30%{opacity: 1; transform: scale(1);}100%{opacity: 1;}}
+		@keyframes visibledeux{20%{opacity: 0; transform: scale(0);}55%{opacity: 1; transform: scale(1);}100%{opacity: 1;}}
+		@keyframes visibletrois{45%{opacity: 0; transform: scale(0);}80%{opacity: 1; transform:scale(1);}100%{opacity: 1;}}
+		@keyframes visiblequatre{75%{opacity: 0; transform: scale(0);}100%{opacity: 1; transform: scale(1);}}
+
+
+
+
+
+
+/*popup*/
