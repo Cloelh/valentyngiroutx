@@ -498,7 +498,6 @@ h4 {
 		background-position: center;
 		max-height: 400px;
 		margin-bottom: 0px;
-		margin-left: 0px;
 	}
 	.about .text {
 		display: flex;
@@ -515,6 +514,7 @@ h4 {
 	}
 	.grille_musikout {
 		display: grid;
+		grid-auto-rows: auto;
 		grid-template-columns: repeat(1, 1fr) !important;
 		grid-template-rows: repeat(4, 1fr);
 		grid-column-gap: 18px;
@@ -548,9 +548,6 @@ h4 {
 							"text" 
 							"gauche"
 							"droite";
-	}
-	.grille_video .title {
-		justify-content: flex-start;
 	}
 	/*web*/
 	.grille_web {
@@ -599,7 +596,7 @@ h4 {
 
 .reveal_about-visible {
 	opacity: 1;
-	transform: translateX(-40px);
+	transform: translateX(0px);
 	transition: .4s ease all;
 }
 
