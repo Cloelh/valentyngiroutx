@@ -509,75 +509,60 @@ h4 {
 		width: 100vw;
 		margin-right: 100px;*/
 	}
-	.grille_musikout {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 0.3fr 7fr;
-		grid-template-areas: "title 	title" "bekar 	text";
+	.projet .title {
+		justify-content: center;
+    	align-items: center;
 	}
+	.grille_musikout {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr) !important;
+		grid-template-rows: repeat(4, 1fr);
+		grid-column-gap: 18px;
+		grid-row-gap: 18px;
+		grid-template-areas:"title" 
+							"text"
+							"lard" 
+							"bekar";
+	}
+	/*photo*/
 	.grille_photo {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 0.3fr 0.8fr;
-		grid-column-gap: 30px;
-		grid-row-gap: 30px;
-		grid-template-areas: "gauche 	milieu" "gauche 	title" "gauche 	text";
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(5, 1fr);
+		grid-column-gap: 18px;
+		grid-row-gap: 18px;
+		grid-template-areas:"title"
+							"text" 
+							"gauche" 
+							"milieu"
+							"droite";
 	}
-	.grille_photo .gauche {
-		grid-area: gauche;
-		background-image: url('../img/Bekar.jpg');
-	}
-	.grille_photo .milieu {
-		grid-area: milieu;
-		background-image: url('../img/lard.jpg');
-	}
-	.grille_photo .droite {
-		display: none;
-	}
-	.grille_photo .title {
-		grid-area: title;
-		justify-content: flex-start;
-	}
+	/*video*/
 	.grille_video {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
-		grid-column-gap: 30px;
-		grid-row-gap: 30px;
-		grid-template-areas: "title 		droite" "gauche 	text";
-	}
-	.grille_video .gauche {
-		grid-area: gauche;
-		background-image: url('../img/Bekar.jpg');
-	}
-	.grille_video .droite {
-		grid-area: droite;
-		background-image: url('../img/lard.jpg');
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		grid-column-gap: 18px;
+		grid-row-gap: 18px;
+		grid-template-areas: "title" 
+							"text" 
+							"gauche"
+							"droite";
 	}
 	.grille_video .title {
-		grid-area: title;
-		justify-content: flex-end;
-		align-items: flex-end;
+		justify-content: flex-start;
 	}
+	/*web*/
 	.grille_web {
 		display: grid;
-		grid-template-columns: 1fr 0.6fr;
-		grid-template-rows: .2fr 1.1fr 1.9fr;
-		grid-column-gap: 30px;
-		grid-row-gap: 30px;
-		grid-template-areas: "title 		droite" "text 		droite" "gauche 	droite";
-	}
-	.grille_web .gauche {
-		grid-area: gauche;
-		background-image: url('../img/Bekar.jpg');
-	}
-	.grille_web .droite {
-		grid-area: droite;
-		background-image: url('../img/lard.jpg');
-	}
-	.grille_web .title {
-		grid-area: title;
-		justify-content: flex-start;
-		align-items: center;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		grid-column-gap: 18px;
+		grid-row-gap: 18px;
+		grid-template-areas: "title" 
+							"text" 
+							"gauche"
+							"droite";
 	}
 	.title {
 		justify-content: flex-start;
