@@ -28,6 +28,17 @@ h4{
 	padding-left: 150px;
 }
 
+.margium {
+	max-width:1300px;
+	margin: 0px auto;
+	display: block;
+}
+.margium-s {
+	max-width:1000px;
+	margin: 0px auto;
+	display: block;
+}
+
 /*header*/
 .header{
 	background: rgb(195,34,154);
@@ -82,8 +93,6 @@ h4{
 				to{box-shadow: 10px 10px 30px rgba(0,0,0,0.2);transform: translate(-1px, -1px);}
 
 			}
-
-
 
 /*index about*/
 .about{
@@ -230,9 +239,6 @@ h4{
 		justify-content: flex-start;
 		align-items: center;
 	}
-
-
-
 
 /*skills*/
 .skills{
