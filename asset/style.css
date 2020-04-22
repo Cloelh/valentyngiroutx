@@ -6,7 +6,13 @@
 	box-sizing: border-box;
 
 }
-
+.reveal {
+	opacity: 0;
+}
+a {
+    text-decoration: none;
+    color:#002D80;
+}
 .image {
 	border-radius: 10px;
 }
@@ -586,7 +592,7 @@ h4 {
 /*scroll*/
 
 .reveal {
-	opacity: 0 !important;
+	opacity: 0;
 }
 
 .reveal_about {
