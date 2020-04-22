@@ -7,7 +7,7 @@
 	</div>
 	<div class="footer_document">
 		<h4>Télecharger mon CV</h4>
-		<a class="reveal bounceIn delay-0.5s" data-revealation="animated"  href="CV.DOCS" download="CV_Valentyn.giroutx"><i class="fas fa-file-pdf"></i></a>
+		<a class="reveal bounceIn delay-0.5s" data-revealation="animated"  href="CV-valentyngiroutx.pdf" download="CV-valentyngiroutx.pdf"><i class="fas fa-file-pdf"></i></a>
 	</div>
 	<div class="footer_contact">
 		<h4>Contacter moi !</h4>

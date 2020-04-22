@@ -17,7 +17,7 @@
 				tout horizon et les faire découvrir à notre 
 				audience.
 				<br><br>
-				Pour retrouver Musikout, cliquer ici.
+				<a href="https://musikout.fr" target="_blank">Visiter Musikout</a>
 				</p>
 			</div>
 			<div class="reveal title" data-revealation="reveal_photo-visible4"><h5>Musikout</h5></div>
