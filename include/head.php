@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 	<!-- responsive -->
-	<meta name="viewport" content="width=device-width">
+	<meta name=viewport content="width=device-width, initial-scale=1">
 
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
